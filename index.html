@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0076)file:///C:/Users/bruno/Downloads/Programa%C3%A7%C3%A3o%20Completa%20(1).html -->
+<!-- saved from url=(0127)file:///C:/Users/bruno/AppData/Local/Microsoft/Windows/INetCache/IE/A4OEO8PH/Programa%C3%A7%C3%A3o_Completa_-_Congresso[1].html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programação Completa - Congresso</title>
     <style>
-        body {
+body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -53,8 +53,6 @@
             background-color: #2c3e50;
             color: white;
             font-weight: bold;
-            position: sticky;
-            top: 0;
         }
         .time-col {
             width: 8%;
@@ -65,7 +63,7 @@
             width: 15.4%;
         }
         .highlight {
-            background-color: #e8f4fc;
+            background-color: #f7f9fa; /* Cor de fundo mais suave */
         }
         .break {
             background-color: #fff3e0;
@@ -100,10 +98,86 @@
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
-        @media (max-width: 1200px) {
-            table {
+
+        /* === NOVOS ESTILOS PARA MOBILE === */
+        @media (max-width: 992px) {
+            .container {
+                padding: 15px;
+            }
+            table, thead, tbody, th, tr, td {
                 display: block;
-                overflow-x: auto;
+            }
+
+            table {
+                border: 0;
+                box-shadow: none;
+            }
+
+            thead {
+                display: none; /* Esconde o cabeçalho original da tabela */
+            }
+
+            /* Transforma a linha da tabela (TR) em um cartão */
+            tr {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-bottom: 25px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                overflow: hidden; /* Garante que o conteúdo respeite as bordas arredondadas */
+            }
+            
+            td {
+                border: none;
+                border-bottom: 1px solid #eee; /* Linha separadora entre os locais */
+                position: relative;
+                padding: 15px 15px 15px 40%; /* Espaço para o rótulo à esquerda */
+                min-height: 50px;
+            }
+
+            td:last-child {
+                border-bottom: none;
+            }
+
+            /* O rótulo que mostra o nome da coluna (auditório) */
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: 35%;
+                font-weight: bold;
+                color: #16a085; /* Cor do tema para o rótulo */
+                white-space: normal;
+                padding-right: 10px;
+            }
+
+            /* O cabeçalho do cartão com o horário */
+            td.time-col {
+                padding: 12px 15px;
+                background-color: #2c3e50;
+                color: white;
+                font-size: 1.2em;
+                text-align: center;
+                font-weight: bold;
+                width: 100%;
+                border-radius: 0;
+                border-bottom: 1px solid #16a085;
+            }
+
+            /* Remove o rótulo "data-label" da célula de horário */
+            td.time-col:before {
+                display: none;
+            }
+            
+            /* Estilo para cartões de intervalo e almoço */
+            .break td, .lunch td {
+                padding-left: 15px;
+                text-align: center;
+                font-size: 1.1em;
+                background-color: #fdf8e8;
+            }
+            .lunch td {
+                background-color: #fff0f1;
             }
         }
     </style>
@@ -195,8 +269,8 @@
                 
                 <!-- Sessão 15:30-17:00 -->
                 <tr>
-                    <td class="time-col">15:30-17:00</td>
-                    <td>-</td>
+                    <td class="time-col">19:30</td>
+                    <td><strong>OPENING CERIMONY</strong></td>
                 </tr>
             </tbody>
         </table>
@@ -227,9 +301,9 @@
                         <div class="presentation">Traumatic Cardiac Arrest - Mauro A. Pereira (Portugal)</div>
                     </td>
                     <td>
-                        <div class="session-title">CONFERÊNCIA</div>
-                        <div class="moderator">Presidente: Maurício Godinho (Ribeirão Preto, SP)</div>
-                        <div class="presentation">.</div>
+                        <div class="session-title"></div>
+                        <div class="moderator"></div>
+                        <div class="presentation"></div>
                     </td>
                     <td>
                         <div class="session-title">CONFERÊNCIA</div>
@@ -246,7 +320,7 @@
                     <td>
                         <div class="session-title">CONFERÊNCIA</div>
                         <div class="moderator">President: Maramélia Araújo de Miranda Alves (São Paulo, SP, Brasil)</div>
-                        <div class="presentation">A função da neuroplasticidade no acidente vascular cerebral - Bárbara Voetsch (Brazil / USA)</div>
+                        <div class="presentation">Fatores prognósticos e tratamento da Trombose Venosa Cerebral - Bárbara Voetsch (Brazil / USA)</div>
                     </td>
                 </tr>
                 
@@ -293,7 +367,7 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                         <div class="presentation">Options in the management of esophageal perforation - Carlos Mesquita (Portugal)</div>
                         <div class="presentation">Esophageal perforations: new perspectives and treatment paradigms - Juan Carlos Puyana (Colombia / USA)</div>
                         <div class="presentation">The approach to cervical penetrating injuries and esophageal perforation - Pablo Ottolino (Venezuela / Chile)</div>
-                        <div class="presentation">Endoscopic management of esophageal perforations and leaks - Everson L. A. Artifon (São Paulo, SP)</div>
+                        <div class="presentation">Endoscopic management of esophageal perforations and leaks - Márcio Roberto Facanali Junior (São Paulo, SP)</div>
                     </td>
                     <td>
                         <div class="session-title">Infecções graves do complexo cervicofacial</div>
@@ -309,7 +383,7 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                         <div class="presentation">Explorando anatomia funcional e aplicações práticas do Doppler - Ronald Flumignan (São Paulo, SP)</div>
                         <div class="presentation">Artéria carótida como precursor de AVCi - Ana Terezinha Guillaumont (Campinas, SP)</div>
                         <div class="presentation">Como manejar o AVC hemorrágico - Maramelia Miranda (São Paulo, SP)</div>
-                        <div class="presentation">Protocolo de assistência ao AVC no MSG Boston - Bárbara Voetsch (Brazil / USA)</div>
+                        <div class="presentation">Protocolo de assistência ao AVC no MGH Boston - Bárbara Voetsch (Brazil / USA)</div>
                     </td>
                 </tr>
                 
@@ -348,9 +422,9 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     </td>
                     <td>
                         <div class="session-title">Doença Arterial Obstrutiva Periférica</div>
-                        <div class="moderator">Moderador:</div>
-                        <div class="presentation">Obstrução Arterial Aguda - Elisa Zampieri</div>
-                        <div class="presentation">Fisiopatologia da Doença Arterial Obstrutiva Periférica - Altino Morares</div>
+                        <div class="moderator">Moderador: Marcelo Matielo (São Paulo, SP)</div>
+                        <div class="presentation">Fisiopatologia da Doença Arterial Obstrutiva Periférica - Altino Morares (Maringá, SP)</div>
+                        <div class="presentation">Métodos diagnósticos da DAOP - Elisa Zampieri  (Ribeirão Preto, SP)</div>
                         <div class="presentation">Tratamento endovascular da DAOP - Edwaldo Edner Joviliano (Ribeirão Preto, SP)</div>
                         <div class="presentation">Tratamento cirúrgico da DAOP - Marcelo Bellini Dalio (Ribeirão Preto, SP)</div>
                     </td>
@@ -415,11 +489,11 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     </td>
                     <td>
                         <div class="session-title">Varizes</div>
-                        <div class="moderator">Moderador: Arlindo Nascimento de Lemos Junior e</div>
-                        <div class="presentation">Estratégias diagnóstica e o que há de mais atual no tratamento de varizes - Ben Hur</div>
+                        <div class="moderator">Moderador: Arlindo Nascimento de Lemos Junior (Limeira, SP)</div>
+                        <div class="presentation">Estratégias diagnóstica e o que há de mais atual no tratamento de varizes - José Ben Hur (São Paulo, SP)</div>
                         <div class="presentation">Avanços no tratamento de varizes: a versatilidade da espuma - Walter Campos (São Paulo, SP)</div>
-                        <div class="presentation">Úlceras Vasculares: desafios contemporâneos e inovações no tratamento - Marília</div>
-                        <div class="presentation">Estratégias de cuidados de feridas venosas - Sérgio Tiossi</div>
+                        <div class="presentation">Úlceras Vasculares: desafios contemporâneos e inovações no tratamento - Andrea Paula Kafeijan (São Paulo - SP)</div>
+                        <div class="presentation">Estratégias de cuidados de feridas venosas - Lidiane Aparecida Ferreira Rocha (São Paulo - SP)</div>
                     </td>
                     <td>
                         <div class="session-title">Status Epilepticus</div>
@@ -475,18 +549,19 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     <td>
                         <div class="session-title">TCE e Neurointensivismo</div>
                         <div class="moderator">Moderador: Cesar Vanderlei Carmona (Campinas, SP) e Anselmo Alves de Souza (São Luis, MA)</div>
-                        <div class="presentation">Hemodinâmica Encefálica no TCE - Marcos Stávale (São Paulo, SP)</div>
                         <div class="presentation">PIC, quando indicar e como interpretar? - Rodrigo Bazan (Botucatu, SP)</div>
+                        <div class="presentation">Hemodinâmica Cerebral após reperfusão no trauma - Marcos Stávale (São Paulo, SP)</div>
                         <div class="presentation">Quais ferramentas para auxiliar na decisão da extubação - Daniela Faez (Campinas, SP)</div>
                         <div class="presentation">Monitorização multimodal no neurotrauma agudo - Carla Bittencourt Rynkowski (Porto Alegre, RS)</div>
                     </td>
                     <td>
                         <div class="session-title">Pé Diabético</div>
-                        <div class="moderator">Moderador:</div>
-                        <div class="presentation">Infecções - diagnóstico e terapêutica e manejo multidisciplinar - João Paulo Tardivo</div>
-                        <div class="presentation">Amputaçao - critérios de decisão e reabilitação - Lucas de Azevedo Portela</div>
+                        <div class="moderator">Moderador: Rafael Barnabé Domingues (Indaiatuba - SP)
+</div>
+                        <div class="presentation">Infecções - diagnóstico e terapêutica e manejo multidisciplinar - Lucas Trindade (Campinas -SP)</div>
+                        <div class="presentation">Amputaçao - critérios de decisão e reabilitação - Marita Von Rautenfeld (São Paulo - SP)</div>
                         <div class="presentation">Avanços na revascularização, técnicas e desfecho - Henrique Jorge Guedes (São Paulo, SP)</div>
-                        <div class="presentation">Novas abordagens: terapia convencional à medicina regenerativa - Marcelo Calil (São Paulo, SP)</div>
+                        <div class="presentation">Novas abordagens: terapia convencional à medicina regenerativa - Marcelo Calil Burihan (São Paulo - SP)</div>
                     </td>
                     <td>
                         <div class="session-title">Desafios erm Urgências Neurológicas</div>
@@ -600,7 +675,7 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     <td class="time-col">10:00-10:30</td>
                     <td>
                         <div class="session-title">CONFERÊNCIA</div>
-                        <div class="moderator">Presidente:</div>
+                        <div class="moderator">Presidente: Marta Duran Fernandez (Campinas, SP)</div>
                         <div class="presentation">Jornada acadêmica em pesquisa e inovação: do Brasil para o mundo - Marcella Cardoso (Brazil / USA)</div>
                     </td>
                     <td>
@@ -611,8 +686,9 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     <td>-</td>
                     <td>
                         <div class="session-title">CONFERÊNCIA</div>
-                        <div class="moderator">Presidente: Lu Regazzo</div>
-                        <div class="presentation">Acessos vasculares no paciente oncológico - Zeratti</div>
+                        <div class="moderator">"Presidente: Glauco Saes (São Paulo - SP)
+"</div>
+                        <div class="presentation"> Acessos vasculares no paciente oncológico - Antônio Zeratti (São Paulo, SP)</div>
                     </td>
                     <td>
                         
@@ -655,12 +731,13 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                         <div class="presentation">Personalized pain management after trauma: using genetics to guide safer prescribing - Kai-Uwe Lewandrowski (Germany / USA)</div>
                     </td>
                     <td>
-                        <div class="session-title">Aneurima de Aorta</div>
-                        <div class="moderator">Moderador: Vladmir Vasconcellos (Sâo Paulo, SP) e Marcelo Calil (São Paulo, SP)</div>
-                        <div class="presentation">Conceito, epidemiologia e impacto psicológico da doença - Carla Bosnardo (São Paulo / Brazil)</div>
+                        <div class="session-title">Aneurisma de Aorta</div>
+                        <div class="moderator">Moderador: Marcelo Calil Burihan (São Paulo - SP)
+</div>
+                        <div class="presentation">Conceito, epidemiologia e impacto psicológico da doença - Carla Bosnardo (Campinas, SP)</div>
                         <div class="presentation">Como identificar precocemente os grupos de risco? - Sahagoff</div>
-                        <div class="presentation">Ainda há espaço para o tratamento aberto? - Luis Carlos Uta Nakano</div>
-                        <div class="presentation">Desafios no tratamento endovascular - Ricardo Okawa</div>
+                        <div class="presentation">Ainda há espaço para o tratamento aberto? - Luis Carlos Uta Nakano (São Paulo, SP)</div>
+                        <div class="presentation">Desafios no tratamento endovascular - Ricardo Okawa (Divinópolis, MG)</div>
                     </td>
                     <td>
                         <div class="session-title">HSA não traumática</div>
@@ -709,7 +786,7 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                         <div class="session-title">COMA / Rebaixamento Consciência</div>
                         <div class="moderator">Moderador: Fernanda Diório Masi Galhardo (Campinas, SP) e Francine Edwiges R. Batista (Alfenas, MG)</div>
                         <div class="presentation">Quando pensar em intoxicações como causa do rebaixamento do nível de consciência? - Mário Henrique Franco (Campinas, SP)</div>
-                        <div class="presentation">Síncope na Emergência, como ter segurança para alta do paciente?</div>
+                        <div class="presentation">Síncope na Emergência, como ter segurança para alta do paciente? - Vitor Guimarães Correa (Campinas, SP)</div>
                         <div class="presentation">Idoso com rebaixamento de consciência? - Marcio Balthazar (Campinas, SP)</div>
                         <div class="presentation">Do COMA a Morte Cerebral, quais os cuidados com o potencial doador - Julieth Santana Silva Lage (Campinas, SP)</div>
                     </td>
@@ -723,11 +800,12 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     </td>
                     <td>
                         <div class="session-title">Especialidade Cirurgia Vascular</div>
-                        <div class="moderator">Moderadores: Adnan Neser e José Carlos</div>
+                        <div class="moderator">Moderadores: Adnan Neser (São Paulo, SP) e Marcelo Calil Burihan (São Paulo - SP)
+</div>
                         <div class="presentation">Tendência no mercado de trabalho  - Luis Carlos Uta Nakano (São Paulo, SP)</div>
-                        <div class="presentation">Como técnicas alternativas influenciam a curva de aprendizado na cirrugia vascular - Carolina Flumignan</div>
+                        <div class="presentation">Como técnicas alternativas influenciam a curva de aprendizado na cirrugia vascular - Carolina Flumignan (São Paulo, SP)</div>
                         <div class="presentation">Redes Sociais, o segredo para impulsionar seu crescimento profissional - Juliana Puggina (São Paulo, SP)</div>
-                        <div class="presentation">Autonomia ou infraestrutura? Comparando o consultório particular com a carreira hospitalar - Edgar Rabboni</div>
+                        <div class="presentation">Autonomia ou infraestrutura? Comparando o consultório particular com a carreira hospitalar - Edgar Rabboni (São Paulo, SP)</div>
                     </td>
                     <td>
                         <div class="session-title">Neurocirurgia Oncológica</div>
@@ -735,7 +813,7 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                         <div class="presentation">Tumores Espinhais: perspectiva, diagnóstico e cirurgia - Carlos Roberto Massella Junior (Campo Grante, MS)</div>
                         <div class="presentation">Cirurgia Neurooncológica com o paciente acordado - Cleiton Formentim (Campinas, SP)</div>
                         <div class="presentation">Neuroimagem e neuronavegação na Neurocirurgia Oncológica - Eduardo Ribas (São Paulo, SP)</div>
-                        <div class="presentation">Tumore de áreas eloquentes - Silvia Mazzali Verst (São Paulo, SP)</div>
+                        <div class="presentation">Monitorização neurofisiológica intraoperatóriao para tumores de áreas eloquentes - Silvia Mazzali Verst (São Paulo, SP)</div>
                     </td>
                     <td>
                         <div class="session-title">Lesões Vasculares Cervicais</div>
@@ -781,16 +859,18 @@ Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP</div>
                     <td>
                         <div class="session-title">Atualizações no Atendimento Pré Hospitalar</div>
                         <div class="moderator">Moderador: Roni Daniel Gomes (Piracicaba, SP) e Helder Takeo Kogawa (Guarulhos, SP)</div>
-                        <div class="presentation">Hemoconcentrado no APH - realidade? - Lucas Certain (Bragança Paulista, SP)</div>
+                        <div class="presentation">Ângulo de Extração de Vítimas - Ednei Fernando dos Santos (São Paulo, SP)</div>
                         <div class="presentation">Uso do POCUS no APH - Hamilton Rocha Junior (Campinas, SP)</div>
-                        <div class="presentation">Desafios do Resgate Aeromédico - Fabiana Ajar (São Paulo, SP)</div>
+                        <div class="presentation">Estratégias no Salvamento em Altura - Ademir de Campos Junior (Piracaia, SP)</div>
                     <div class="session-title">16H - ENCERRAMENTO DA SESSÃO</div></td>
                     <td>
                         <div class="session-title">TVP</div>
-                        <div class="moderator">Moderadores:José Luiz Cataldo e</div>
-                        <div class="presentation">TVP sob controle, como previnir e tratar de forma eficaz - Annibal Constantino</div>
+                        <div class="moderator">Moderadores: José Luiz Cataldo (Amparo, SP) e Regina de Faria Bittencourt (São Paulo, SP)</div>
+                        <div class="presentation">TVP sob controle, como previnir e tratar de forma eficaz - Annibal Constantino (Capivari, SP)
+</div>
                         <div class="presentation">Como se avalia a TVP em grupos especiais (gestantes e idosos) - Gilberto Narchi (São Paulo, SP)</div>
-                        <div class="presentation">TVP e COVID: o impacto de uma infecção sistêmica na saúde vascular</div>
+                        <div class="presentation">TVP e COVID: o impacto de uma infecção sistêmica na saúde vascular - Luisa Resende Silva (São Paulo, SP)
+infecção sistêmica na saúde vascular</div>
                         <div class="presentation">Diagnósticos diferenciais de TVP, como indetificar com clareza? - Márcio Villaça (Bragança Paulista, SP)</div>
                     </td>
                     <td>
