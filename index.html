@@ -130,7 +130,7 @@ body {
                 border: none;
                 border-bottom: 1px solid #eee; /* Linha separadora entre os locais */
                 position: relative;
-                padding: 15px 15px 15px 40%; /* Espaço para o rótulo à esquerda */
+                padding: 15px 15px 15px 48%; /* Espaço para o rótulo à esquerda */
                 min-height: 50px;
             }
 
@@ -149,6 +149,8 @@ body {
                 color: #16a085; /* Cor do tema para o rótulo */
                 white-space: normal;
                 padding-right: 10px;
+                max-width: 45%;                /* impede ultrapassar o padding */
+                word-wrap: break-word;         /* quebra se for muito longo  */
             }
 
             /* O cabeçalho do cartão com o horário */
