@@ -962,12 +962,17 @@ infecção sistêmica na saúde vascular</div>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("table").forEach(table => {
-        const headers = [...table.querySelectorAll("thead th")].map(th => th.textContent.trim());
+        // 1. pega o título de cada <th>
+        const headers = [...table.querySelectorAll("thead th")].map(th =>
+          // 2. innerText mantém a quebra vinda do <br>
+          // 3. troca qualquer sequência de espaço/enter por UM espaço
+          th.innerText.replace(/\s+/g, " ").trim()
+        );
+    
+        // 4. grava o texto corrigido no data-label de cada <td>
         table.querySelectorAll("tbody tr").forEach(row => {
           [...row.children].forEach((cell, i) => {
-            if (i > 0) {                          // pula a coluna de horário
-              cell.setAttribute("data-label", headers[i]);
-            }
+            if (i > 0) cell.dataset.label = headers[i];
           });
         });
       });
