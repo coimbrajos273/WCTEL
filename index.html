@@ -957,5 +957,18 @@ infecção sistêmica na saúde vascular</div>
             <p>© 2025 - World Congress of Trauma and Emergency Leagues (WCTEL). Todos os direitos reservados.</p>
         </div>
     </div>
-
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("table").forEach(table => {
+        const headers = [...table.querySelectorAll("thead th")].map(th => th.textContent.trim());
+        table.querySelectorAll("tbody tr").forEach(row => {
+          [...row.children].forEach((cell, i) => {
+            if (i > 0) {                          // pula a coluna de horário
+              cell.setAttribute("data-label", headers[i]);
+            }
+          });
+        });
+      });
+    });
+    </script>
 </body></html>
