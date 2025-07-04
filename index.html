@@ -130,7 +130,7 @@ body {
                 border: none;
                 border-bottom: 1px solid #eee; /* Linha separadora entre os locais */
                 position: relative;
-                padding: 15px 15px 15px 48%; /* Espaço para o rótulo à esquerda */
+                padding: 15px 15px 15px 40%; /* Espaço para o rótulo à esquerda */
                 min-height: 50px;
             }
 
@@ -149,8 +149,6 @@ body {
                 color: #16a085; /* Cor do tema para o rótulo */
                 white-space: normal;
                 padding-right: 10px;
-                max-width: 45%;                /* impede ultrapassar o padding */
-                word-wrap: break-word;         /* quebra se for muito longo  */
             }
 
             /* O cabeçalho do cartão com o horário */
@@ -959,23 +957,5 @@ infecção sistêmica na saúde vascular</div>
             <p>© 2025 - World Congress of Trauma and Emergency Leagues (WCTEL). Todos os direitos reservados.</p>
         </div>
     </div>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("table").forEach(table => {
-        // 1. pega o título de cada <th>
-        const headers = [...table.querySelectorAll("thead th")].map(th =>
-          // 2. innerText mantém a quebra vinda do <br>
-          // 3. troca qualquer sequência de espaço/enter por UM espaço
-          th.innerText.replace(/\s+/g, " ").trim()
-        );
-    
-        // 4. grava o texto corrigido no data-label de cada <td>
-        table.querySelectorAll("tbody tr").forEach(row => {
-          [...row.children].forEach((cell, i) => {
-            if (i > 0) cell.dataset.label = headers[i];
-          });
-        });
-      });
-    });
-    </script>
+
 </body></html>
